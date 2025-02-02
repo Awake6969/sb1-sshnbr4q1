@@ -14,12 +14,16 @@
         {
           "type": "renderModule",
           "assetId": "tgRGUXaQ_qv1",
-          "checksum": "405cd7e1855fe8b8fe351ac5e588ac56"
+          "checksum": "cb241ddcabb89bd88357838b3b40b7c0"
         },
         {
           "type": "cssRules",
           "assetId": "tgRGUXaQ_qv1",
+<<<<<<< Updated upstream
           "checksum": "405cd7e1855fe8b8fe351ac5e588ac56"
+=======
+          "checksum": "cb241ddcabb89bd88357838b3b40b7c0"
+>>>>>>> Stashed changes
         },
         {
           "assetId": "geRSV5b4Vjn6d6MshPwDqp",

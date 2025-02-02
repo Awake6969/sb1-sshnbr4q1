@@ -144,7 +144,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.h1
               )}
             >
-              {"Welcome to your first page."}
+              {"Welcome to your first page"}
             </h1>
             <div
               data-plasmic-name={"text"}
