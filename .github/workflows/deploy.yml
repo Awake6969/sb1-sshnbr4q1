@@ -1,0 +1,33 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main  # Deployment startet automatisch, wenn auf "main" gepusht wird
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repository aus GitHub abrufen
+        uses: actions/checkout@v2
+
+      - name: 🔧 Node.js installieren
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: 📦 Abhängigkeiten installieren
+        run: npm install
+
+      - name: 🏗️ Projekt bauen
+        run: npm run build
+
+      - name: 🚀 Deployment auf Hostinger via SSH
+        uses: easingthemes/ssh-deploy@v2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
+          REMOTE_HOST: 185.224.137.104  # Ersetze mit deiner Hostinger-Domain oder IP
+          REMOTE_USER: u988293552  # Ersetze mit deinem Hostinger-Benutzernamen
+          TARGET: /public_html  # Zielverzeichnis auf Hostinger
